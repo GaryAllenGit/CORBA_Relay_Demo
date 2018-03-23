@@ -1,0 +1,43 @@
+Demo of a "relay" - i.e. a client and server at the same time (using IOR in file trick).
+
+
+To run the demo from IntelliJ simply open the project, open a (IntelliJ) Terminal and type:
+
+    cd cd RelayWithGUIsDemo/src
+    idlj -fall Relay.idl
+
+You can then run the different components of the system.  You need to start them in the following order:
+
+    RelayServer
+    Relay
+    RelayClient
+
+
+To run the demo from a command line:
+
+1. precompile IDL.  Do this either from a command line with:
+
+	idlj -fall Relay.idl
+
+2. Compile the code with:
+
+	javac *.java ClientAndServer/*.java
+
+3. start server:
+
+	java RelayServer
+
+4. in another command tool, start the relay:
+
+    java Relay
+
+5. in another command tool, start the client:
+
+	java RelayClient
+
+
+The client will produce output similar to the following:
+
+Hello world !!
+
+
